@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>주기율표 – 원소의 세계</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <div class="logo-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2"/>
+            <text x="24" y="30" text-anchor="middle" font-size="20" font-weight="700" fill="currentColor" font-family="Inter, sans-serif">e</text>
+          </svg>
+        </div>
+        <div>
+          <h1>주기율표</h1>
+          <p class="subtitle">원소의 세계 · Periodic Table of Elements</p>
+        </div>
+      </div>
+      <div class="header-controls">
+        <div class="search-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+          <input type="text" id="searchInput" placeholder="원소 이름, 기호, 번호로 검색…" autocomplete="off">
+          <button id="clearSearch" class="clear-btn" aria-label="검색 지우기">✕</button>
+        </div>
+        <div class="filter-group">
+          <button class="filter-btn active" data-filter="all">전체</button>
+          <button class="filter-btn" data-filter="metal">금속</button>
+          <button class="filter-btn" data-filter="nonmetal">비금속</button>
+          <button class="filter-btn" data-filter="metalloid">준금속</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Legend -->
+  <section class="legend" id="legend"></section>
+
+  <!-- Periodic Table -->
+  <main class="table-wrap">
+    <div class="table-scroll">
+      <div class="periodic-table" id="periodicTable"></div>
+    </div>
+  </main>
+
+  <!-- Element Detail Panel -->
+  <div class="detail-overlay" id="detailOverlay"></div>
+  <aside class="detail-panel" id="detailPanel">
+    <button class="detail-close" id="detailClose" aria-label="닫기">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="detail-content" id="detailContent"></div>
+  </aside>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>118개 원소 · IUPAC 기준 · 데이터 참고: NIST, Wikipedia</p>
+    <p class="footer-note">원소 기호와 이름은 IUPAC 공식 표기를 따릅니다.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
